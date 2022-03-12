@@ -1,0 +1,36 @@
+{
+  "name": "eiketsu-taisen-net-datalist",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "index.d.ts",
+    "writable.d.ts",
+    "lib"
+  ],
+  "scripts": {
+    "fmt": "prettier --ignore-path .gitignore --write *.ts **/*.ts",
+    "test": "tsd && jest"
+  },
+  "keywords": [],
+  "author": "boushi-bird <boushi-bird@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boushi-bird/eiketsu-taisen-net-datalist.git"
+  },
+  "dependencies": {
+    "type-fest": "^2.12.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0",
+    "tsd": "^0.19.1",
+    "typescript": "^4.6.2"
+  }
+}

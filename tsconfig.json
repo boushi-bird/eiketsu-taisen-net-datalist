@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "test-d"
+  ]
+}
