@@ -8,4 +8,7 @@
 
 ```
 npm i -D github:boushi-bird/eiketsu-taisen-net-datalist
+
+# or
+# npm i -D github:boushi-bird/eiketsu-taisen-net-datalist#(tag name)
 ```

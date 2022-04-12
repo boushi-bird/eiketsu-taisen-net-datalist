@@ -1,6 +1,6 @@
 {
-  "name": "eiketsu-taisen-net-datalist",
-  "version": "0.0.1",
+  "name": "@boushi-bird/eiketsu-taisen-net-datalist",
+  "version": "0.0.2",
   "description": "",
   "files": [
     "README.md",
