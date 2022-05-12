@@ -7,6 +7,7 @@ interface General {
   period_idx: number;
   appear_num: number;
   appear_suffix: string;
+  appear_filter_idx: number;
   index_initial_idx: number;
   card_type_idx: number;
   card_number: number;
@@ -22,6 +23,19 @@ interface General {
   strat_idx: number;
   illust_idx: number;
   cv_idx: number;
+}
+
+interface GeneralAppearVer {
+  idx: number;
+  code: string;
+  name: string;
+  child_idx_list: number[];
+}
+
+interface GeneralAppearFilterGroup {
+  idx: number;
+  code: string;
+  name: string;
 }
 
 interface GeneralColor {
@@ -185,6 +199,7 @@ interface EquipEffectSub {
 
 interface EquipFilter {
   idx: number;
+  code: string;
   name: string;
 }
 
@@ -218,6 +233,8 @@ export interface BaseData {
   path: unknown;
   general: General[];
   color: GeneralColor[];
+  generalAppearVer: GeneralAppearVer[],
+  generalAppearFilterGroup: GeneralAppearFilterGroup[],
   period: Period[];
   indexInitial: IndexInitial[];
   cardType: CardType[];

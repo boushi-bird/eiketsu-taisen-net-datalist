@@ -36,6 +36,8 @@ describe("BaseData", () => {
     "data",
     "path",
     "general",
+    "generalAppearVer",
+    "generalAppearFilterGroup",
     "color",
     "period",
     "indexInitial",
@@ -105,6 +107,7 @@ describe('BaseData["general"]', () => {
       "period_idx",
       "appear_num",
       "appear_suffix",
+      "appear_filter_idx",
       "index_initial_idx",
       "card_type_idx",
       "card_number",
@@ -121,6 +124,32 @@ describe('BaseData["general"]', () => {
       "illust_idx",
       "cv_idx",
     ],
+    ignoreProps: [],
+  });
+});
+
+describe('BaseData["generalAppearVer"]', () => {
+  type DataType = BaseData["generalAppearVer"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.generalAppearVer;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "code", "name", "child_idx_list"],
+    ignoreProps: [],
+  });
+});
+
+describe('BaseData["generalAppearFilterGroup"]', () => {
+  type DataType = BaseData["generalAppearFilterGroup"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.generalAppearFilterGroup;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "code", "name"],
     ignoreProps: [],
   });
 });
@@ -448,7 +477,7 @@ describe('BaseData["equipFilter"]', () => {
   });
 
   testHasProperties(() => data, {
-    props: ["idx", "name"],
+    props: ["idx", "code", "name"],
     ignoreProps: [],
   });
 });
