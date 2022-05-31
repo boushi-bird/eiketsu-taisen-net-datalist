@@ -360,6 +360,7 @@ describe('BaseData["equip"]', () => {
       "level_max",
       "effect_main_idx",
       "effect_sub_idx",
+      "reinforce_oban_num",
     ],
     ignoreProps: [],
   });

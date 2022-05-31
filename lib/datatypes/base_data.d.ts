@@ -147,6 +147,7 @@ interface Equip {
   level_max: number;
   effect_main_idx: number;
   effect_sub_idx: number | null;
+  reinforce_oban_num: number[];
 }
 
 interface EquipRarity {
