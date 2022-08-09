@@ -1,6 +1,7 @@
 interface General {
   idx: number;
   code: string;
+  ds_code: string;
   name: string;
   kana: string;
   color_idx: number;

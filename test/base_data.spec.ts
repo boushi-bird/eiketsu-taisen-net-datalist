@@ -101,6 +101,7 @@ describe('BaseData["general"]', () => {
     props: [
       "idx",
       "code",
+      "ds_code",
       "name",
       "kana",
       "color_idx",
