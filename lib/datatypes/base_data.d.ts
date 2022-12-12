@@ -230,6 +230,25 @@ interface EquipEffectSystemColorType {
   blue: number;
 }
 
+interface PlayerData {
+  idx: number;
+  playerCode: string;
+  hideRubyGeneral: boolean;
+  hideRubyStrat: boolean;
+  hideRubyEquip: boolean;
+  enishi: number;
+  oban: number;
+  diamond: number;
+  equip_bring_num: number;
+  equip_stock_num: number;
+  total_play_num: number;
+  card_use_num: number[];
+  card_gift_num: number[];
+  card_friendship: number[];
+  card_printed: (0 | 1)[];
+  card_printable: (0 | 1)[];
+}
+
 export interface BaseData {
   data: unknown;
   path: unknown;
@@ -262,6 +281,6 @@ export interface BaseData {
   school: unknown;
   schoolDetail: unknown;
   schoolLevel: unknown;
-  playerData: unknown;
+  playerData: PlayerData[];
   playerEquip: unknown;
 }
