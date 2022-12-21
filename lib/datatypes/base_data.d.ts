@@ -2,6 +2,7 @@ interface General {
   idx: number;
   code: string;
   ds_code: string;
+  face_code: string;
   name: string;
   kana: string;
   color_idx: number;
@@ -24,6 +25,7 @@ interface General {
   strat_idx: number;
   illust_idx: number;
   cv_idx: number;
+  appear_pattern_idx: number[];
 }
 
 interface GeneralAppearVer {
@@ -70,6 +72,7 @@ interface GeneralCost {
   idx: number;
   code: string;
   name: string;
+  value: number;
 }
 
 interface GeneralRarity {
@@ -149,6 +152,7 @@ interface Equip {
   effect_main_idx: number;
   effect_sub_idx: number | null;
   reinforce_oban_num: number[];
+  appear_pattern_idx: number[];
 }
 
 interface EquipRarity {
@@ -230,6 +234,20 @@ interface EquipEffectSystemColorType {
   blue: number;
 }
 
+interface AppearPattern {
+  idx: number;
+  start: string;
+  end: string;
+  way_to_get_idx: number;
+  url: string;
+}
+
+interface WayToGet {
+  idx: number;
+  name: string;
+  help: string;
+}
+
 interface PlayerData {
   idx: number;
   playerCode: string;
@@ -281,6 +299,8 @@ export interface BaseData {
   school: unknown;
   schoolDetail: unknown;
   schoolLevel: unknown;
+  appearPattern: AppearPattern[];
+  wayToGet: WayToGet[];
   playerData: PlayerData[];
   playerEquip: unknown;
 }

@@ -1,6 +1,6 @@
 {
   "name": "@boushi-bird/eiketsu-taisen-net-datalist",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "",
   "files": [
     "README.md",
@@ -22,7 +22,7 @@
     "url": "https://github.com/boushi-bird/eiketsu-taisen-net-datalist.git"
   },
   "dependencies": {
-    "type-fest": "^3.3.0"
+    "type-fest": "^3.4.0"
   },
   "devDependencies": {
     "@types/jest": "^29.2.4",

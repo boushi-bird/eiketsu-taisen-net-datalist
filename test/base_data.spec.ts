@@ -64,6 +64,8 @@ describe("BaseData", () => {
     "school",
     "schoolDetail",
     "schoolLevel",
+    "appearPattern",
+    "wayToGet",
     "playerData",
     "playerEquip",
   ];
@@ -102,6 +104,7 @@ describe('BaseData["general"]', () => {
       "idx",
       "code",
       "ds_code",
+      "face_code",
       "name",
       "kana",
       "color_idx",
@@ -124,6 +127,7 @@ describe('BaseData["general"]', () => {
       "strat_idx",
       "illust_idx",
       "cv_idx",
+      "appear_pattern_idx",
     ],
     ignoreProps: [],
   });
@@ -215,7 +219,7 @@ describe('BaseData["cost"]', () => {
   });
 
   testHasProperties(() => data, {
-    props: ["idx", "code", "name"],
+    props: ["idx", "code", "name", "value"],
     ignoreProps: [],
   });
 });
@@ -362,6 +366,7 @@ describe('BaseData["equip"]', () => {
       "effect_main_idx",
       "effect_sub_idx",
       "reinforce_oban_num",
+      "appear_pattern_idx",
     ],
     ignoreProps: [],
   });
@@ -532,6 +537,34 @@ describe('BaseData["equipEffectSystemColorType"]', () => {
     ignoreProps: [],
   });
 });
+
+describe('BaseData["appearPattern"]', () => {
+  type DataType = BaseData["appearPattern"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.appearPattern;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "start", "end", "way_to_get_idx", "url"],
+    ignoreProps: [],
+  });
+});
+
+describe('BaseData["wayToGet"]', () => {
+  type DataType = BaseData["wayToGet"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.wayToGet;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "name", "help"],
+    ignoreProps: [],
+  });
+});
+
+// MEMO: PlayerDataは取れない場合があるのでテストには書かない
 
 function testHasProperties<DataType>(
   data: () => DataType[],
