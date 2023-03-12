@@ -58,7 +58,6 @@ describe("BaseData", () => {
     "equipEffectMain",
     "equipEffectSub",
     "equipFilter",
-    "equipTarget",
     "equipEffectSystem",
     "equipEffectSystemColorType",
     "school",
@@ -489,19 +488,6 @@ describe('BaseData["equipFilter"]', () => {
   });
 });
 
-describe('BaseData["equipTarget"]', () => {
-  type DataType = BaseData["equipTarget"][number];
-  let data: DataType[] = [];
-  beforeEach(() => {
-    data = baseData.equipTarget;
-  });
-
-  testHasProperties(() => data, {
-    props: ["idx", "name"],
-    ignoreProps: [],
-  });
-});
-
 describe('BaseData["equipEffectSystem"]', () => {
   type DataType = BaseData["equipEffectSystem"][number];
   let data: DataType[] = [];
@@ -513,7 +499,6 @@ describe('BaseData["equipEffectSystem"]', () => {
     props: [
       "idx",
       "code",
-      "name",
       "short_name",
       "color_type_idx",
       "filter_idx",

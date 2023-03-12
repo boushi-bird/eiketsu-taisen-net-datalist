@@ -209,15 +209,9 @@ interface EquipFilter {
   name: string;
 }
 
-interface EquipTarget {
-  idx: number;
-  name: string;
-}
-
 interface EquipEffectSystem {
   idx: number;
   code: string;
-  name: string;
   short_name: string;
   color_type_idx: number;
   filter_idx: number;
@@ -293,7 +287,6 @@ export interface BaseData {
   equipEffectMain: EquipEffectMain[];
   equipEffectSub: EquipEffectSub[];
   equipFilter: EquipFilter[];
-  equipTarget: EquipTarget[];
   equipEffectSystem: EquipEffectSystem[];
   equipEffectSystemColorType: EquipEffectSystemColorType[];
   school: unknown;
