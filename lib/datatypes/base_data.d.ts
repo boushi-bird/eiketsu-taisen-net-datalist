@@ -94,6 +94,7 @@ interface Skill {
   name: string;
   short_name: string;
   caption: string;
+  by_cost: boolean;
 }
 
 interface GeneralStrategy {

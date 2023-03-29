@@ -244,7 +244,7 @@ describe('BaseData["skill"]', () => {
   });
 
   testHasProperties(() => data, {
-    props: ["idx", "code", "name", "short_name", "caption"],
+    props: ["idx", "code", "name", "short_name", "caption", "by_cost"],
     ignoreProps: [],
   });
 });
