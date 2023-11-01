@@ -60,13 +60,19 @@ describe("BaseData", () => {
     "equipFilter",
     "equipEffectSystem",
     "equipEffectSystemColorType",
+    "equipCategory",
     "school",
     "schoolDetail",
     "schoolLevel",
     "appearPattern",
     "wayToGet",
     "playerData",
-    "playerEquip",
+    "playerequip",
+    "soul",
+    "soulRarity",
+    "soulEffect",
+    "soulEffectColorType",
+    "playersoul",
   ];
 
   const IGNORE_KEYS: string[] = [];
@@ -366,6 +372,7 @@ describe('BaseData["equip"]', () => {
       "effect_sub_idx",
       "reinforce_oban_num",
       "appear_pattern_idx",
+      "category",
     ],
     ignoreProps: [],
   });
@@ -379,7 +386,7 @@ describe('BaseData["equipRarity"]', () => {
   });
 
   testHasProperties(() => data, {
-    props: ["idx", "code", "name", "short_name"],
+    props: ["idx", "code", "name", "short_name", "buy", "sell"],
     ignoreProps: [],
   });
 });

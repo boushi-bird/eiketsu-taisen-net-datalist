@@ -154,6 +154,7 @@ interface Equip {
   effect_sub_idx: number | null;
   reinforce_oban_num: number[];
   appear_pattern_idx: number[];
+  category: number;
 }
 
 interface EquipRarity {
@@ -161,6 +162,8 @@ interface EquipRarity {
   code: string;
   name: string;
   short_name: string;
+  buy: number;
+  sell: number;
 }
 
 type EquipEffectMain = Omit<EquipEffectSub, "cond_caption">;
@@ -229,6 +232,12 @@ interface EquipEffectSystemColorType {
   blue: number;
 }
 
+interface EquipCategory {
+  idx: number;
+  code: string;
+  name: string;
+}
+
 interface AppearPattern {
   idx: number;
   start: string;
@@ -290,11 +299,19 @@ export interface BaseData {
   equipFilter: EquipFilter[];
   equipEffectSystem: EquipEffectSystem[];
   equipEffectSystemColorType: EquipEffectSystemColorType[];
+  equipCategory: EquipCategory;
   school: unknown;
   schoolDetail: unknown;
   schoolLevel: unknown;
   appearPattern: AppearPattern[];
   wayToGet: WayToGet[];
   playerData: PlayerData[];
-  playerEquip: unknown;
+  // playerEquipはVer.2.0.0A以降なくなった。代わりにplayerequipができた
+  playerEquip?: unknown;
+  playerequip?: unknown;
+  soul?: unknown;
+  soulRarity?: unknown;
+  soulEffect: unknown;
+  soulEffectColorType: unknown;
+  playersoul: unknown;
 }
