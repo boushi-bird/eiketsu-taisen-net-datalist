@@ -84,14 +84,14 @@ describe("BaseData", () => {
 
   test("added keys", async () => {
     const keys = Object.keys(data).filter(
-      (key) => !IGNORE_KEYS.includes(key) && !(KEYS as string[]).includes(key)
+      (key) => !IGNORE_KEYS.includes(key) && !(KEYS as string[]).includes(key),
     );
     expect(keys).toEqual([]);
   });
 
   test("deleted keys", async () => {
     const keys = KEYS.filter(
-      (key) => !IGNORE_KEYS.includes(key) && !Object.keys(data).includes(key)
+      (key) => !IGNORE_KEYS.includes(key) && !Object.keys(data).includes(key),
     );
     expect(keys).toEqual([]);
   });
@@ -560,12 +560,12 @@ describe('BaseData["wayToGet"]', () => {
 
 function testHasProperties<DataType>(
   data: () => DataType[],
-  { props, ignoreProps }: { props: (keyof DataType)[]; ignoreProps: string[] }
+  { props, ignoreProps }: { props: (keyof DataType)[]; ignoreProps: string[] },
 ) {
   test("no data", async () => {
     for (const d of data()) {
       const keys = (props as string[]).filter(
-        (key) => !ignoreProps.includes(key) && d[key] === undefined
+        (key) => !ignoreProps.includes(key) && d[key] === undefined,
       );
       expect(keys).toEqual([]);
     }
@@ -575,7 +575,7 @@ function testHasProperties<DataType>(
     for (const d of data()) {
       const keys = Object.keys(d).filter(
         (key) =>
-          !ignoreProps.includes(key) && !(props as string[]).includes(key)
+          !ignoreProps.includes(key) && !(props as string[]).includes(key),
       );
       expect(keys).toEqual([]);
     }
@@ -584,7 +584,7 @@ function testHasProperties<DataType>(
   test("deleted keys", async () => {
     for (const d of data()) {
       const keys = (props as string[]).filter(
-        (key) => !ignoreProps.includes(key) && !Object.keys(d).includes(key)
+        (key) => !ignoreProps.includes(key) && !Object.keys(d).includes(key),
       );
       expect(keys).toEqual([]);
     }
