@@ -73,6 +73,8 @@ describe("BaseData", () => {
     "soulEffect",
     "soulEffectColorType",
     "playersoul",
+    "kabuki",
+    "kabukiRank",
   ];
 
   const IGNORE_KEYS: string[] = [];
@@ -557,6 +559,32 @@ describe('BaseData["wayToGet"]', () => {
 });
 
 // MEMO: PlayerDataは取れない場合があるのでテストには書かない
+
+describe('BaseData["kabuki"]', () => {
+  type DataType = BaseData["kabuki"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.kabuki;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "point"],
+    ignoreProps: [],
+  });
+});
+
+describe('BaseData["kabukiRank"]', () => {
+  type DataType = BaseData["kabukiRank"][number];
+  let data: DataType[] = [];
+  beforeEach(() => {
+    data = baseData.kabukiRank;
+  });
+
+  testHasProperties(() => data, {
+    props: ["idx", "name", "val", "low", "img"],
+    ignoreProps: [],
+  });
+});
 
 function testHasProperties<DataType>(
   data: () => DataType[],

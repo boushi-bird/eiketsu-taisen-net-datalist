@@ -271,6 +271,19 @@ interface PlayerData {
   card_printable: (0 | 1)[];
 }
 
+interface Kabuki {
+  idx: number;
+  point: number[];
+}
+
+interface KabukiRank {
+  idx: number;
+  name: string;
+  val: number;
+  low: number;
+  img: string;
+}
+
 export interface BaseData {
   data: unknown;
   path: unknown;
@@ -314,4 +327,6 @@ export interface BaseData {
   soulEffect: unknown;
   soulEffectColorType: unknown;
   playersoul: unknown;
+  kabuki: Kabuki[];
+  kabukiRank: KabukiRank[];
 }
