@@ -183,6 +183,8 @@ interface EquipEffectSub {
   effect0_lv3_powerup: boolean;
   effect0_lv4_param: number | null;
   effect0_lv4_powerup: boolean;
+  effect0_lv5_param: number | null;
+  effect0_lv5_powerup: boolean;
 
   effect1_system_idx: number | null;
   effect1_lv1_param: number | null;
@@ -192,6 +194,8 @@ interface EquipEffectSub {
   effect1_lv3_powerup: boolean;
   effect1_lv4_param: number | null;
   effect1_lv4_powerup: boolean;
+  effect1_lv5_param: number | null;
+  effect1_lv5_powerup: boolean;
 
   effect2_system_idx: number | null;
   effect2_lv1_param: number | null;
@@ -201,10 +205,13 @@ interface EquipEffectSub {
   effect2_lv3_powerup: boolean;
   effect2_lv4_param: number | null;
   effect2_lv4_powerup: boolean;
+  effect2_lv5_param: number | null;
+  effect2_lv5_powerup: boolean;
 
   time_lv2_extend: boolean;
   time_lv3_extend: boolean;
   time_lv4_extend: boolean;
+  time_lv5_extend: boolean;
 }
 
 interface EquipFilter {
@@ -329,4 +336,5 @@ export interface BaseData {
   playersoul: unknown;
   kabuki: Kabuki[];
   kabukiRank: KabukiRank[];
+  kabukiHistory: unknown;
 }
